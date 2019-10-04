@@ -61,7 +61,7 @@ https://gfycat.com/whoppingwavykagu
 1. In level BP:
     1. Create the widget
     1. Add to viewport
- 1. Test in PIE
+1. Test in PIE
 1. Fix hidden mouse cursor with node Set Show Mouse Cursor
 1. Fix pawn by overriding game mode and setting to default pawn
 
@@ -109,18 +109,18 @@ https://gfycat.com/whoppingwavykagu
 
 ### Créer WBP_Player
 1. Boîte horizontale (HP)
-    1. texte
-    1. Barre de progression
+    1. texte
+    1. Barre de progression
 1. Boîte de superposition (ultime)
-    1. Barre de progression
-    1. texte
+    1. Barre de progression
+    1. texte
 1. Boîte horizontale (munitions)
-    1. Texte x 4
+    1. Texte x 4
 
 ### Ajouter un widget au joueur FPS BP
 1. Effacer les nœuds après Event BeginPlay
 1. Utilisez le noeud Créer un widget
-    1. Sélectionnez la classe WBP_Player
+    1. Sélectionnez la classe WBP_Player
 1. Utilisez le noeud Ajouter à la fenêtre de visualisation
 
 ### Lier les propriétés dans WBP_Player
@@ -145,24 +145,24 @@ https://gfycat.com/whoppingwavykagu
 1. Entrez le niveau
 1. Ajouter une image de fond avec une ancre plein écran
 1. Ajouter une boîte verticale avec 3 boutons
-    1. jouer
-    1. Paramètres
-    1. Quitter
+    1. jouer
+    1. Paramètres
+    1. Quitter
 1. Renommez tous les boutons
 1. Ajoutez du texte comme enfant à chaque bouton
 1. Ajoutez une autre boîte verticale avec 3 boutons (Ctrl + W est dupliqué)
-    1. 720p
-    1. 1080p
-    1. retour
+    1. 720p
+    1. 1080p
+    1. retour
 1. Renommez tous les boutons
 1. Changer la couleur du bouton survolé en bleu
 1. Ajoutez du texte comme enfant à chaque bouton
 1. Renommez toutes les cases verticales
 1. Définissez Comportement / Visibilité sur masqué
 1. Au niveau BP:
-    1. Créez le widget
-    1. Ajouter à la fenêtre
- 1. Test en PIE
+    1. Créez le widget
+    1. Ajouter à la fenêtre
+1. Test en PIE
 1. Correction du curseur de souris caché avec le noeud Set Show Mouse Cursor
 1. Corrigez le pion en modifiant le mode de jeu et en définissant le pion par défaut
 
@@ -181,27 +181,27 @@ https://gfycat.com/whoppingwavykagu
 1. Ajouter une boîte verticale + texte + image
 1. Ajouter un contour au texte
 1. Créer BP_CapturePoint
-    1. Ajouter un composant de widget
-       1. Définissez la classe sur WBP_CapturePoint
-    1. Supprimer la collision
-    1. Tourner à 180 degrés en Z
-    1. Ajouter la logique du tiers pour définir la rotation sur rotation de la caméra
+    1. Ajouter un composant de widget
+       1. Définissez la classe sur WBP_CapturePoint
+    1. Supprimer la collision
+    1. Tourner à 180 degrés en Z
+    1. Ajouter la logique du tiers pour définir la rotation sur rotation de la caméra
 
 ### Extra:
 1. Créer BP_Mine
-    1. Ajouter un maillage statique en tant que racine
-    1. Créer une fonction de dommage dans le joueur et l'appeler
-    1. Faire apparaître l’émetteur à l’emplacement de la mine, puis détruire
-    1. Ajouter une impulsion à la composante mouvement du joueur
+    1. Ajouter un maillage statique en tant que racine
+    1. Créer une fonction de dommage dans le joueur et l'appeler
+    1. Faire apparaître l’émetteur à l’emplacement de la mine, puis détruire
+    1. Ajouter une impulsion à la composante mouvement du joueur
 1. Créer une animation de rechargement
-    1. Animation en double dupliquée
-    1. Allez au début et sélectionnez le bras gauche et ajoutez la clé
-    1. Allez au cadre 15 et faites pivoter le bras puis ajoutez la clé
-    1. Allez au cadre 30 et faites pivoter le bras arrière et ajoutez la clé
-    1. Répétez les mêmes étapes mais pour le bras droit
-    1. Faites un clic droit sur la surbrillance rouge et supprimez-le de 30 à la fin
-    1. Appliquer et fermer
-    1. Créer un montage
-        1. Changer le groupe par défaut en armes
-        1. Jouer le montage dans FPS BP
+    1. Animation en double dupliquée
+    1. Allez au début et sélectionnez le bras gauche et ajoutez la clé
+    1. Allez au cadre 15 et faites pivoter le bras puis ajoutez la clé
+    1. Allez au cadre 30 et faites pivoter le bras arrière et ajoutez la clé
+    1. Répétez les mêmes étapes mais pour le bras droit
+    1. Faites un clic droit sur la surbrillance rouge et supprimez-le de 30 à la fin
+    1. Appliquer et fermer
+    1. Créer un montage
+        1. Changer le groupe par défaut en armes
+        1. Jouer le montage dans FPS BP
 1. Rendre le menu de pause revenir au niveau du menu principal
