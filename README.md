@@ -69,7 +69,7 @@ https://gfycat.com/whoppingwavykagu
 1. Button_Play: use Open Level node (map name is FirstPersonExampleMap)
 1. Make vertical boxes IsVariable so we can use them
 1. Button_Settings: hide MainMenu and show SettingsMenu
-1. 720p and 1080p: use console command to change resoltion R.setRes:WxH
+1. 720p and 1080p: use console command to change resoltion R.setRes WxH
 1. Button_Return: show MainMenu and hide SettingsMenu
 1. Quit: use console command exit
 1. In FPS BP Begin Play add node Set Input Mode Game Only
@@ -104,3 +104,104 @@ https://gfycat.com/whoppingwavykagu
         1. Change default group to arms
         1. Play montage in FPS BP
 1. Make pause menu returning to main menu level
+
+## Instructions (fr)
+
+### Créer WBP_Player
+1. Boîte horizontale (HP)
+    1. texte
+    1. Barre de progression
+1. Boîte de superposition (ultime)
+    1. Barre de progression
+    1. texte
+1. Boîte horizontale (munitions)
+    1. Texte x 4
+
+### Ajouter un widget au joueur FPS BP
+1. Effacer les nœuds après Event BeginPlay
+1. Utilisez le noeud Créer un widget
+    1. Sélectionnez la classe WBP_Player
+1. Utilisez le noeud Ajouter à la fenêtre de visualisation
+
+### Lier les propriétés dans WBP_Player
+1. Créer une référence au joueur dans Event Construct
+1. Lier la barre HP à la santé
+1. Lier Ultimate Bar à Ultimate
+
+### Retour à FPS BP pour mettre à jour les variables
+1. Ajouter la touche F pour tester HP
+1. Ajoutez une condition pour ne tirer que si des munitions> 0
+1. Ajouter la touche R pour recharger
+1. Ajouter la clé Q à la guérison complète si ultime = 1,0
+1. Ajouter la fonction IncrementUltimate
+1. Test en PIE
+
+### Ajouter la logique d'incrémentation ultime dans bullet
+1. Ajouter une référence au joueur
+1. Dans FPS BP, envoyez-vous à la balle
+
+### Ajouter le menu principal
+1. Créer un niveau
+1. Entrez le niveau
+1. Ajouter une image de fond avec une ancre plein écran
+1. Ajouter une boîte verticale avec 3 boutons
+    1. jouer
+    1. Paramètres
+    1. Quitter
+1. Renommez tous les boutons
+1. Ajoutez du texte comme enfant à chaque bouton
+1. Ajoutez une autre boîte verticale avec 3 boutons (Ctrl + W est dupliqué)
+    1. 720p
+    1. 1080p
+    1. retour
+1. Renommez tous les boutons
+1. Changer la couleur du bouton survolé en bleu
+1. Ajoutez du texte comme enfant à chaque bouton
+1. Renommez toutes les cases verticales
+1. Définissez Comportement / Visibilité sur masqué
+1. Au niveau BP:
+    1. Créez le widget
+    1. Ajouter à la fenêtre
+ 1. Test en PIE
+1. Correction du curseur de souris caché avec le noeud Set Show Mouse Cursor
+1. Corrigez le pion en modifiant le mode de jeu et en définissant le pion par défaut
+
+### Accéder au graphique d'événement et ajouter une liaison à tous les clics de bouton
+1. Button_Play: utilise le noeud Open Level (le nom de la carte est FirstPersonExampleMap)
+1. Faites des boîtes verticales IsVariable afin que nous puissions les utiliser
+1. Button_Settings: masque le menu principal et affiche le menu Settings
+1. 720p et 1080p: utilisez la commande console pour changer la résolution R.setRes WxH
+1. Button_Return: afficher le menu principal et masquer le menu Settings
+1. Quitter: utilise la commande console
+1. Dans FPS BP Begin Play, ajouter un noeud Définir le mode d'entrée Jeu uniquement
+
+### Créer un point de capture d'interface utilisateur mondiale
+1. Créer WBP_CapturePoint
+1. Supprimer la toile
+1. Ajouter une boîte verticale + texte + image
+1. Ajouter un contour au texte
+1. Créer BP_CapturePoint
+    1. Ajouter un composant de widget
+       1. Définissez la classe sur WBP_CapturePoint
+    1. Supprimer la collision
+    1. Tourner à 180 degrés en Z
+    1. Ajouter la logique du tiers pour définir la rotation sur rotation de la caméra
+
+### Extra:
+1. Créer BP_Mine
+    1. Ajouter un maillage statique en tant que racine
+    1. Créer une fonction de dommage dans le joueur et l'appeler
+    1. Faire apparaître l’émetteur à l’emplacement de la mine, puis détruire
+    1. Ajouter une impulsion à la composante mouvement du joueur
+1. Créer une animation de rechargement
+    1. Animation en double dupliquée
+    1. Allez au début et sélectionnez le bras gauche et ajoutez la clé
+    1. Allez au cadre 15 et faites pivoter le bras puis ajoutez la clé
+    1. Allez au cadre 30 et faites pivoter le bras arrière et ajoutez la clé
+    1. Répétez les mêmes étapes mais pour le bras droit
+    1. Faites un clic droit sur la surbrillance rouge et supprimez-le de 30 à la fin
+    1. Appliquer et fermer
+    1. Créer un montage
+        1. Changer le groupe par défaut en armes
+        1. Jouer le montage dans FPS BP
+1. Rendre le menu de pause revenir au niveau du menu principal
